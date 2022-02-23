@@ -471,69 +471,322 @@ label {
 .worker-image {
 	margin-top: 40px;
 }
-.service{
-    background-color: #f9fafb;
+/* Services section part css */
+.services-section{
+    overflow: hidden;
 }
-.services-tab-item {
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 20px;
-    margin-bottom: 40px !important;
+.service-tab-items {
+	border-bottom: 2px solid #ddd;
+	padding-bottom: 20px;
+	margin-bottom: 41px !important;
 }
-.services-tab-item li{
+.service-tab-items li{
     flex: 1 1 auto;
-    line-height: 32px;
-    color: #676767;
 }
-
-.serives-tab-content-text{}
-.serives-tab-content-text h3{}
-.serives-tab-content-text p{
-    color: #676767;
+.service-tab-items li a.active span i{
+    color: #e73c3e;
 }
-.serives-tab-content-text ul li{
-    line-height: 33px;
-    color: #676767;
-}
-.services-tab-item li a.active span i {
-    color: red;
-}
-.services-tab-item li a{
-    background: none !important;
-}
-.services-tab-item li a.active{
+.service-tab-items li a.active{
     position: relative;
 }
-
-.services-tab-item li a span i {
-    background: #fff;
-    height: 80px;
-    width: 80px;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 80px;
-    font-size: 30px;
-    color: #666;
+.service-tab-items li a.active::after {
+	content: "";
+	position: absolute;
+	top: 149px;
+	left: 0px;
+	height: 2px;
+	width: 200px;
+	background: #e73c3e;
+}
+.service-tab-items li a span i {
+	background: #fff;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	line-height: 80px;
+	font-size: 40px;
+	color: #666;
     box-shadow: 1px 2px 10px rgb(221, 237, 253);
 }
-.services-tab-item li a strong {
-    color: #222;
-    font-weight: 600;
-    font-size: 20px;
+.service-tab-items li a strong {
+	color: #000;
+	font-size: 22px;
+	font-weight: 600;
+}
+.service-text-right ul{
+    list-style: none;
+    
+}
+.service-text-right ul li{
+    position: relative;
+}
+.service-text-right ul li::before {
+	content: "";
+	position: absolute;
+	top: 6px;
+	right: 487px;
+	height: 10px;
+	width: 10px;
+	background: #ee3f3e;
+	border-radius: 50%;
+}
+/* Claient section part css */
+   
+.claient {
+	display: flex;
+	align-items: center;
+}
+.claient-image{
+    
+}
+.claient-content{}
+.claient-content p {
+	font-size: 21px;
+	color: #111;
+}
+.claient-content h6 {
+	font-size: 17px;
+	color: #e73c3e;
+}
+.claient-content span {
+	color: #666;
+}
+.carousel-indicators [data-bs-target] {
+	box-sizing: content-box;
+	flex: 0 1 auto;
+	width: 20px;
+	height: 20px;
+	padding: 0;
+	margin-right: 3px;
+	margin-left: 3px;
+	cursor: pointer;
+	background-clip: padding-box;
+	border: 1px solid green;
+
+	opacity: .5;
+	border-radius: 50%;
+	margin-bottom: 10px;
+}
+.carousel-indicators {
+	position: absolute;
+	right: 0;
+	bottom: 122px;
+	left: 990px;
+	z-index: 2;
+	display: flex;
+	justify-content: center;
+	padding: 0;
+	margin-right: 15%;
+	margin-bottom: 1rem;
+	margin-left: 15%;
+	list-style: none;
+	flex-direction: column;
+	
+}
+
+.carousel-indicators .active {
+	opacity: 1;
+	background: red;
+}
+.carousel-control-next-icon, .carousel-control-prev-icon {
+	display: inline-block;
+	width: 2rem;
+	height: 2rem;
+	background-repeat: no-repeat;
+	background-position: 50%;
+	background-size: 100% 100%;
+	visibility: hidden;
 }
 
 
-.serives-tab-content-text ul{
+/* Team section part css */
+.team-member{
+    position: relative;
+}
+.team-member img{
+    width: 100%;
+    margin: auto;
+}
+.social-icon {
+	position: absolute;
+	bottom: 83px;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+.social-icon ul {
+	list-style: none;
+	padding-left: 0;
+	text-align: center;
+	margin-bottom: 25px;
+}
+.social-icon ul li {
+	display: inline-block;
+	transition: .5s ease-in-out;
+	transform: translateY(45px);
+	opacity: 0;
+	visibility: hidden;
+}
+.team-member:hover .social-icon ul li{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.team-member .social-icon ul li:nth-child(1){
+    transition-delay: .2s;
+}
+.team-member .social-icon ul li:nth-child(2){
+    transition-delay: .3s;
+}
+.team-member .social-icon ul li:nth-child(3){
+    transition-delay: .4s;
+}
+.team-member .social-icon ul li:nth-child(4){
+    transition-delay: .5s;
+}
+.social-icon ul li a {
+	display: block;
+	font-size: 25px;
+	height: 40px;
+	width: 40px;
+	background: #fff;
+	border-radius: 50%;
+	line-height: 40px;
+	color: #666;
+    transition: .5s;
+}
+.social-icon ul li a:hover{
+    color: #fff;
+    background: #e73c3e;
+}
+.member-content h4 {
+	color: #e73c3e;
+	margin-top: 30px;
+}
+/* story section 2 part css */
+.small-div{}
+.small-div img{}
+.small-div p {
+	color: #e73c3e;
+	margin-top: 26px;
+}
+.small-div h3 {
+	margin-bottom: 21px;
+}
+.small-div h3 a {
+	text-decoration: none;
+	color: #111;
+	font-size: 25px;
+	font-weight: bold;
+	
+}
+.small-div h3 a:hover{
+    color: #e73c3e!important;
+}
+.small-div a {
+	text-decoration: none;
+	color: #111;
+	font-size: 18px;
+	font-weight: 500;
+    transition: .5s;
+}
+.small-div:hover.small-div a{
+    letter-spacing: 1px;
+    color: #e73c3e;
+}
+.small-div:hover.small-div h3 a{
+    letter-spacing: 0;
+    color: #111;
+}
+
+/* Footer-section part css */
+.footer-top{
+    border-bottom: 1px solid #444;
+    
+}
+.footer-section{
+    background: #111111;
+    color: #fff;
+}
+.footer-section a{
+    color: #fff;
+}
+
+.footer-details{}
+.footer-details img {
+	max-width: 100%;
+	margin-bottom: 34px;
+}
+.footer-details p{}
+
+.social-icon-left{}
+.social-icon-left ul{
+    display: flex;
     list-style: none;
     padding-left: 0;
 }
+.social-icon-left ul li{}
+.social-icon-left ul li span {
+	display: inline-block;
+	margin-right: 10px;
+	font-size: 20px;
+}
+.social-icon-left ul li a {
+	font-size: 20px;
+	padding: 0px 10px;
+    transition: .5s;
+}
+.social-icon-left ul li a:hover{
+    color: #e73c3e;
+}
+.footer-taitel{}
+.footer-taitel h3 {
+	border-bottom: 1px solid #666;
+	padding-bottom: 18px;
+	margin-bottom: 20px;
+}
+.footer-taitel ul{
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+.footer-taitel ul li {
+	padding: 10px 0;
+}
+.footer-taitel ul li a{
+    text-decoration: none;
+    transition: .5s;
+}
+.footer-taitel ul li a:hover{
+    color: #e73c3e;
+    letter-spacing: 1px;
+}
+.footer-contact-item {
+	margin-bottom: 20px;
+}
+.footer-contact-item span {
+	display: inline-block;
+	margin-right: 18px;
+}
+.footer-contact-item span i {
+	font-size: 21px;
+	margin-top: 10px;
+}
+.footer-contact-item a {
+	text-decoration: none;
+	font-size: 17px;
+    transition: .5s;
+}
+.footer-contact-item a:hover{
+    color: #e73c3e;
+}
 
-.serives-tab-content-text ul li::before {
-    content: "";
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    background: red;
-    border-radius: 50%;
-    margin-right: 12px;
-
+/* footer-bottom part css */
+.footer-copyright{}
+.footer-copyright p{
+    color: #444;
+}
+.footer-copyright a{
+    text-decoration: none;
+    
 }
